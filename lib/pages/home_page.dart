@@ -1,4 +1,5 @@
 import 'package:comic_book/controllers/user_controller.dart';
+import 'package:comic_book/services/api_rest/endpoints.dart';
 import 'package:comic_book/services/firebase/firebase_auth_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -21,8 +22,8 @@ class HomePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   GestureDetector(
-                      onTap: () {
-                        signOutGoogle();
+                      onTap: () async {
+                        await getIssues(0);
                       },
                       child: const Text('Latest Issues')),
                   GestureDetector(
