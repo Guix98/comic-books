@@ -11,9 +11,11 @@ dependencies:
   firebase_core: ^2.26.0
   flutter:
     sdk: flutter
+  fluttericon: ^2.0.0
   get: ^4.6.6
   google_sign_in: ^6.2.1
   http: ^1.2.0
+  intl: ^0.19.0
   responsive_sizer: ^3.3.0+1
 
 dev_dependencies:

@@ -1,3 +1,4 @@
+import 'package:comic_book/controllers/content_controller.dart';
 import 'package:comic_book/controllers/user_controller.dart';
 import 'package:comic_book/pages/home_page.dart';
 import 'package:comic_book/theme/theme.dart';
@@ -9,6 +10,7 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 
 class App extends StatelessWidget {
   final UserController userController = Get.put(UserController());
+  final ContentController contentController = Get.put(ContentController());
   App({super.key});
 
   @override
@@ -20,7 +22,7 @@ class App extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: 'Comic Book',
           theme: webTheme(),
-          home: HomePage(),
+          home: const HomePage(),
         );
       },
     );
