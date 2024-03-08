@@ -5,7 +5,7 @@ import 'package:comic_book/services/api_rest/requests.dart';
 // Future<List<Issue>>
 Future<List<Issue>> getIssues(int offset) async {
   final response = await ApiRequest.getRequest(
-      '/issues/?api_key=${ApiRequest.apiKey}&format=json&sort=date_added:desc&field_list=image,date_added,name,issue_number,api_detail_url&offset=$offset');
+      '/issues/?api_key=${ApiRequest.apiKey}&format=json&sort=date_added:desc&field_list=image,date_added,name,issue_number,id&offset=$offset');
   final parsedResponse = response['results'] as List;
 
   final issuesList =

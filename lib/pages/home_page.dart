@@ -2,9 +2,9 @@ import 'package:comic_book/controllers/content_controller.dart';
 import 'package:comic_book/controllers/user_controller.dart';
 import 'package:comic_book/widgets/grid_layout.dart';
 import 'package:comic_book/widgets/list_layout.dart';
+import 'package:comic_book/widgets/login_button.dart';
 import 'package:comic_book/widgets/view_selector.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttericon/font_awesome_icons.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -43,23 +43,7 @@ class _HomePageState extends State<HomePage> {
             child: Column(
               children: [
                 Row(
-                  children: [
-                    const Spacer(),
-                    IconButton(
-                        onPressed: () {},
-                        icon: Row(
-                          children: [
-                            const Icon(FontAwesome.google),
-                            SizedBox(
-                              width: 1.w,
-                            ),
-                            const Text(
-                              'Log In Here!',
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            ),
-                          ],
-                        ))
-                  ],
+                  children: [const Spacer(), LoginButton()],
                 ),
                 const Divider(),
                 Row(

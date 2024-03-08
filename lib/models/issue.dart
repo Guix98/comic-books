@@ -3,14 +3,14 @@ import 'dart:convert';
 import 'package:comic_book/models/image_collection.dart';
 
 class Issue {
-  String? apiDetailUrl;
+  int? id;
   DateTime? dateAdded;
   ImageCollection? image;
   String? issueNumber;
   String? name;
 
   Issue({
-    this.apiDetailUrl,
+    this.id,
     this.dateAdded,
     this.image,
     this.issueNumber,
@@ -18,14 +18,14 @@ class Issue {
   });
 
   Issue copyWith({
-    String? apiDetailUrl,
+    int? id,
     DateTime? dateAdded,
     ImageCollection? image,
     String? issueNumber,
     String? name,
   }) =>
       Issue(
-        apiDetailUrl: apiDetailUrl ?? this.apiDetailUrl,
+        id: id ?? this.id,
         dateAdded: dateAdded ?? this.dateAdded,
         image: image ?? this.image,
         issueNumber: issueNumber ?? this.issueNumber,
@@ -37,7 +37,7 @@ class Issue {
   String toRawJson() => json.encode(toJson());
 
   factory Issue.fromJson(Map<String, dynamic> json) => Issue(
-        apiDetailUrl: json["api_detail_url"],
+        id: json["id"],
         dateAdded: json["date_added"] == null
             ? null
             : DateTime.parse(json["date_added"]),
@@ -49,7 +49,7 @@ class Issue {
       );
 
   Map<String, dynamic> toJson() => {
-        "api_detail_url": apiDetailUrl,
+        "id": id,
         "date_added": dateAdded?.toIso8601String(),
         "image": image?.toJson(),
         "issue_number": issueNumber,
