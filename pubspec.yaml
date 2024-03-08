@@ -7,10 +7,12 @@ environment:
   sdk: ">=3.2.4 <4.0.0"
 
 dependencies:
+  firebase_auth: ^4.17.7
   firebase_core: ^2.26.0
   flutter:
     sdk: flutter
   get: ^4.6.6
+  google_sign_in: ^6.2.1
   responsive_sizer: ^3.3.0+1
 
 dev_dependencies:

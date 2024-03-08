@@ -19,6 +19,7 @@
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="A new Flutter project.">
+  <meta name="google-signin-client_id" content="1039919843321-urd6jnnnbiel2bp54u0i39hhjbaqg2mm.apps.googleusercontent.com">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -54,6 +55,31 @@
         }
       });
     });
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js"></script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyA8tr39y-g_IOzXia7bwlJauQO5TwuDps0",
+      authDomain: "comic-books-sd.firebaseapp.com",
+      projectId: "comic-books-sd",
+      storageBucket: "comic-books-sd.appspot.com",
+      messagingSenderId: "1039919843321",
+      appId: "1:1039919843321:web:2e526aca9259b950401f28",
+      measurementId: "G-KML1GBS552"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
   </script>
 </body>
 </html>
